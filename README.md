@@ -4,6 +4,25 @@ This is the repository for the Hook Sensor Platform Raspberry Pis. This Reposito
 # Set Up:
 Run these commands on a fresh RPi
 
+# To login into wifi on RPi
+```
+sudo raspi-config
+```
+Select System Options, the Wireless LAN (S1) 
+Enter “utexas-iot” for SSID 
+For the password enter: 1614 8665 6136 1313 4566
+
+# Open wpa_supplicant.conf in Nano with this command:
+```
+sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+```
+Rewrite the text inside the curly brackets with the following:
+```
+ssid="utexas-iot"
+identity="KeittLab"
+password="16148665613613134566"
+```
+
 # Make sure the pi is updated
 ```
 sudo apt-get update 
